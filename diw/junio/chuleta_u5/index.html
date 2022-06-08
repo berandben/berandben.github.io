@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+
+<!--Idioma predeterminado del texto de la página-->
+<html lang="es">
+<!-- =============== Cabecera (metadatos)=============== -->
+
+<head>
+	<!-- Título de la página-->
+	<title>CHULETA U5</title>
+
+	<!-- Meta Título y Meta Descripción de la página -->
+	<meta name="title" content="DIW" />
+	<meta name="description" content="DIW" />
+
+	<!-- Juego de caracteres-->
+	<meta charset="UTF-8" />
+
+	<!-- Compatibilidad Edge-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<!-- Adapta el ancho visible según el dispositivo-->
+	<!-- width=device-width El ancho de la página será igual al ancho de la interfaz del dispositivo -->
+	<!-- initial-scale=1.0 Zoom al cargar la página -->
+	<!-- user-scalable=no No se permite al usuario hacer zoom -->
+	<!-- maximun-scalable=1 Máximo de zoom permitido -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- Autor -->
+	<meta name="autor" content="JJMB" />
+
+	<!-- Enlace a la hoja de estilos -->
+	<link href="assets/css/main.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="./assets/css/filtros.css" type="text/css" />
+	<link rel="stylesheet" href="./assets/css/transformaciones.css" type="text/css" />
+	<link rel="stylesheet" href="./assets/css/transiciones.css" type="text/css" />
+	<link rel="stylesheet" href="./assets/css/keyframe.css" type="text/css" />
+	<link rel="stylesheet" href="./assets/css/canvas.css" type="text/css" />
+	<link rel="stylesheet" href="./assets/css/svg.css" type="text/css" />
+
+	<!-- Enlace al favicon -->
+	<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon/favicon.png" />
+</head>
+
+<!-- =============== Cuerpo de la página =============== -->
+
+<body>
+	<div class="body-wrapper">
+		<header>
+			<h1>Ejercicio Repaso DIW Junio</h1>
+			<ul>
+				<li>
+					<a href="./assets/css/main.css" target="_blank">main.css</a>
+				</li>
+
+			</ul>
+		</header>
+		<main>
+			<section id="filtros">
+				<h2>Filtros</h2>
+				<ul>
+					<li>
+						<a target="blank"
+							href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter">https://developer.mozilla.org/en-US/docs/Web/CSS/filter</a>
+					</li>
+					<li>
+						<a href="./assets/css/filtros.css" target="_blank">filtros.css</a>
+					</li>
+				</ul>
+
+				<ul>
+					<li>filter: blur(5px);</li>
+					<li>filter: brightness(0.4);</li>
+					<li>filter: contrast(200%);</li>
+					<li>filter: drop-shadow(16px 16px 20px blue);</li>
+					<li>filter: grayscale(50%);</li>
+					<li>filter: hue-rotate(90deg);</li>
+					<li>filter: invert(75%);</li>
+					<li>filter: opacity(25%);</li>
+					<li>filter: saturate(30%);</li>
+					<li>filter: sepia(60%);</li>
+					<li>filter: contrast(175%) brightness(3%);</li>
+					<li>filter: none;</li>
+					<li>filter: inherit;</li>
+					<li>filter: initial;</li>
+					<li>filter: revert;</li>
+					<li>filter: revert-layer;</li>
+					<li>filter: unset;</li>
+				</ul>
+			</section>
+			<section id="transformaciones">
+				<h2>Transformaciones</h2>
+
+				<ul>
+					<li><a target="blank"
+							href="https://developer.mozilla.org/es/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms">https://developer.mozilla.org/es/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms</a>
+					</li>
+					<li><a target="blank"
+							href="https://developer.mozilla.org/es/docs/Web/CSS/transform">https://developer.mozilla.org/es/docs/Web/CSS/transform</a>
+					</li>
+					<li><a href="./assets/css/transformaciones.css" target="_blank">transformaciones.css</a></li>
+				</ul>
+
+
+				<div>
+					<article>
+						<h3>Original</h3>
+						<div class="container">
+							<div class="box"></div>
+						</div>
+					</article>
+					<article>
+						<h3>Translate</h3>
+						<div class="container">
+							<div class="box"></div>
+						</div>
+						<p>transform: translate(x,[y]);</p>
+						<p>transform: translate(50px, 50px);</p>
+					</article>
+					<article>
+						<h3>Scale</h3>
+						<div class="container">
+							<div class="box"></div>
+						</div>
+						<p>transform: scale(x,[y]);</p>
+						<p>transform: scale(0.5, 0.5);</p>
+					</article>
+					<article>
+						<h3>Rotate</h3>
+						<div class="container">
+							<div class="box"></div>
+						</div>
+						<p>transform: rotate(Ndeg);</p>
+						<p>transform: rotate(30deg);</p>
+					</article>
+					<article>
+						<h3>Skew</h3>
+						<div class="container">
+							<div class="box"></div>
+						</div>
+						<p>transform: skew(Ndeg,[Ndeg]);</p>
+						<p>transform: skew(20deg, 20deg);</p>
+					</article>
+					<article>
+						<h3>Matrix</h3>
+						<div class="container">
+							<div class="box"></div>
+						</div>
+						<p>transform:matrix(scaleX(),skewY(),skewX(),</p>
+						<p>scaleY(),translateX(),translateY())</p>
+						<p>transform: matrix(1, 0, 0.6, 1, 25, 0);</p>
+					</article>
+				</div>
+			</section>
+			<section id="transiciones">
+				<h2>Transiciones</h2>
+				<ul>
+					<li><a target="blank"
+							href="https://developer.mozilla.org/es/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">https://developer.mozilla.org/es/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions</a>
+					</li>
+					<li><a href="./assets/css/transiciones.css" target="_blank">transiciones.css</a></li>
+				</ul>
+
+				<div>
+					<article>
+						<h3>Pasar el ratón por encima</h3>
+						<div class="container">
+							<div class="box"></div>
+						</div>
+
+						<p>transition:[propiedad a modificar] [Duración] [Tipo de animación] [Retardo];</p>
+						<ul>
+							<li>transition-property: [propiedad1], [propiedad2];</li>
+							<li>transition-duration: [Duración1], [Duración2];</li>
+							<li>transition-timing-function: [Tipo de animación1], [Tipo de animación2];</li>
+							<li>transition-delay:[Duración1], [Duración2];</li>
+						</ul>
+
+						<ul>
+							<li>linear: la velocidad de la animación es uniforme en todo el recorrido.</li>
+							<li>
+								ease: la velocidad se acelera al inicio, luego se retarda un poco y se acelera al final
+								de
+								nuevo.
+							</li>
+							<li>ease-in: la animación empieza lentamente y va aumentando progresivamente.</li>
+
+							<li>ease-out: la animación empieza muy rápida y va descendiendo progresivamente.</li>
+							<li>
+								ease-in-out: la animación empieza y acaba lentamente, y es en la parte central del
+								recorrido
+								donde la velocidad es más rápida.
+							</li>
+						</ul>
+					</article>
+				</div>
+			</section>
+			<section id="keyframes">
+				<h2>Animaciones @keyframe</h2>
+
+				<ul>
+					<li><a target="blank"
+							href="https://developer.mozilla.org/es/docs/Web/CSS/@keyframes">https://developer.mozilla.org/es/docs/Web/CSS/@keyframes</a>
+					</li>
+					<li><a target="blank"
+							href="https://developer.mozilla.org/en-US/docs/web/css/css_animations/using_css_animations">https://developer.mozilla.org/en-US/docs/web/css/css_animations/using_css_animations</a>
+					</li>
+					<li><a href="./assets/css/keyframe.css" target="_blank">keyframes.css</a></li>
+				</ul>
+
+
+				<div>
+					<article>
+						<h3>Animación infinita</h3>
+						<div class="container">
+							<div class="box"></div>
+						</div>
+						<ul>
+							<li>animation-name</li>
+							<li>animation-duration</li>
+							<li>animation-timing-function</li>
+							<li>animation-delay</li>
+							<li>animation-iteration-count</li>
+							<li>animation-direction</li>
+							<li>animation-fill-mode</li>
+							<li>animation-play-state</li>
+						</ul>
+					</article>
+				</div>
+			</section>
+			<section id="canvas-sec">
+				<h2>Canvas</h2>
+
+				<ul>
+					<li><a target="blank"
+							href="https://developer.mozilla.org/es/docs/Web/API/Canvas_API">https://developer.mozilla.org/es/docs/Web/API/Canvas_API</a>
+					</li>
+					<li><a target="blank"
+							href="https://developer.mozilla.org/es/docs/Web/API/Canvas_API/Tutorial/Basic_usage">https://developer.mozilla.org/es/docs/Web/API/Canvas_API/Tutorial/Basic_usage</a>
+					</li>
+					<li><a target="blank"
+							href="https://developer.mozilla.org/es/docs/Web/API/CanvasRenderingContext2D">https://developer.mozilla.org/es/docs/Web/API/CanvasRenderingContext2D</a>
+					</li>
+					<li><a target="blank"
+							href="https://developer.mozilla.org/es/docs/Web/API/CanvasRenderingContext2D/drawImage">https://developer.mozilla.org/es/docs/Web/API/CanvasRenderingContext2D/drawImage</a>
+					</li>
+					<li><a href="./assets/css/canvas.css" target="_blank">canvas.css</a></li>
+					<li><a href="./assets/js/canvas.js" target="_blank">canvas.js</a></li>
+				</ul>
+
+
+				<div>
+					<article>
+						<canvas id="rectangulo" width="300" height="150"></canvas>
+						<h3>Rectángulo</h3>
+						<ul>
+							<li>fillRect(x, y, width, height)</li>
+							<li>strokeRect(x, y, width, height)</li>
+							<li>clearRect(x, y, width, height)</li>
+						</ul>
+					</article>
+					<article>
+						<canvas id="circulo" width="300" height="150"></canvas>
+						<h3>Circulo</h3>
+						<ul>
+							<li>arc(x, y, radius, startAngle, endAngle, anticlockwise)</li>
+							<li>arc(150, 75, 50, 0, 2 * Math.PI);</li>
+						</ul>
+					</article>
+					<article>
+						<canvas id="hexagono" width="300" height="150"></canvas>
+						<h3>Hexágono</h3>
+						<ul>
+							<li>canvasContext.beginPath();</li>
+							<li>canvasContext.moveTo(x,y);</li>
+							<li>canvasContext.lineTo(x, y);</li>
+							<li>canvasContext.strokeStyle = 'black';</li>
+							<li>canvasContext.lineWidth = 3;</li>
+							<li>canvasContext.stroke();</li>
+						</ul>
+					</article>
+
+					<article>
+						<canvas id="imagen" width="300" height="150"></canvas>
+						<h3>Imagen</h3>
+
+						<p>
+							drawImage( imgObj,inicioRecorteX, inicioRecorteY, anchoRecorte, altoRecorte,
+							inicioPosicionXCanvas, inicioPosicionYCanvas, anchoImagenCanvas, altoImagenCanvas)
+						</p>
+					</article>
+
+					<article>
+						<canvas id="texto" width="300" height="150"></canvas>
+						<h3>Texto</h3>
+
+						<p>canvasContext.fillText('hola mundo', x,y);</p>
+					</article>
+				</div>
+			</section>
+			<section id="svg-sec">
+				<h2>SVG</h2>
+
+				<ul>
+					<li><a target="blank"
+							href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/SVG_and_CSS#simplified_structure">https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/SVG_and_CSS#simplified_structure</a>
+					</li>
+					<li><a target="blank"
+							href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial">https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial</a>
+					</li>
+					<li><a href="./assets/css/svg.css" target="_blank">svg.css</a></li>
+				</ul>
+
+				<div>
+					<article>
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+							width="300" height="150">
+							<rect x="50" y="25" width="200" height="100" fill="teal" stroke="burlywood"
+								stroke-width="2" />
+						</svg>
+						<h3>Rectángulo</h3>
+						<p>rect x="50" y="25" width="200" height="100" fill="teal" stroke="burlywood" stroke-width="2"
+						</p>
+					</article>
+					<article>
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+							width="300" height="150">
+							<rect x="50" y="25" rx="10" ry="10" width="200" height="100" fill="teal" stroke="burlywood"
+								stroke-width="2" />
+						</svg>
+						<h3>Rectángulo redondeado</h3>
+						<p>rect x="50" y="25" rx="20" ry="20" width="200" height="100" fill="teal" stroke="burlywood"
+							stroke-width="2" </p>
+					</article>
+					<article>
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+							width="300" height="150">
+							<circle cx=150 cy=75 r=50 stroke="burlywood" stroke-width="2" fill="teal">
+						</svg>
+						<h3>Círculo</h3>
+						<p>circle cx=150 cy=75 r=50 stroke="burlywood" stroke-width="2" fill="teal"</p>
+					</article>
+					<article>
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+							width="300" height="150">
+							<ellipse cx="150" cy="75" rx="95" ry="60" stroke="burlywood" stroke-width="2" fill="teal" />
+						</svg>
+						<h3>Elipse</h3>
+						<p>ellipse cx="150" cy="75" rx="95" ry="60" stroke="burlywood" stroke-width="2" fill="teal" </p>
+					</article>
+					<article>
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+							width="300" height="150">
+							<polygon points="150,20 200,130 100,130" stroke="burlywood" stroke-width=2 fill="teal" />
+						</svg>
+						<h3>Polígono</h3>
+						<p>polygon points="150,20 200,130 100,130" stroke="burlywood" stroke-width=2 fill="teal" </p>
+					</article>
+					<article>
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+							width="300" height="150">
+
+							<line x1="20" y1="15" x2="280" y2="15" stroke="teal" stroke-width="10"
+								stroke-linecap="butt" />
+							<line x1="20" y1="35" x2="280" y2="35" stroke="teal" stroke-width="10"
+								stroke-linecap="round" />
+							<line x1="20" y1="55" x2="280" y2="55" stroke="teal" stroke-width="10"
+								stroke-linecap="square" />
+							<line x1="20" y1="75" x2="280" y2="75" stroke="teal" stroke-width="2"
+								stroke-dasharray="2,2" />
+							<line x1="20" y1="95" x2="280" y2="95" stroke="teal" stroke-width="2"
+								stroke-dasharray="6,6" />
+							<line x1="20" y1="115" x2="280" y2="115" stroke="teal" stroke-width="2"
+								stroke-dasharray="10,10 2,10 " />
+						</svg>
+						<h3>Línea</h3>
+						<p>line x1="20" y1="75" x2="280" y2="75" stroke="teal" stroke-width="4" </p>
+					</article>
+					<article>
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+							width="300" height="150">
+
+							<g id="capa_1">
+								<path id="ruta_1" d="M50,20
+								   V100
+								   H150							   
+								   L200,20
+								   L250,100" stroke="teal" stroke-width="10" fill="none" />
+							</g>
+						</svg>
+						<h3>Rutas (Path)</h3>
+						<p>path
+							id="ruta_1"
+							d="M50,20
+							V100
+							H150
+							L200,20
+							L250,100"
+							stroke="teal"
+							stroke-width="10"
+							fill="none" </p>
+					</article>
+					<article>
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+							width="300" height="150">
+							<text x="50" y="50" font-size="25" fill="teal">Texto</text>
+							<text x="50" y="50" dx="30" dy="30" font-size="25" fill="teal">Texto desplazado</text>
+
+						</svg>
+						<h3>Texto</h3>
+						<p><a target="_blank"
+								href="https://aprende-web.net/NT/svg/svg_4.php">https://aprende-web.net/NT/svg/svg_4.php</a>
+						</p>
+
+					</article>
+					<article>
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+							width="300" height="150">
+							<defs>
+								<path id="ruta_texto" d="M50,20
+									          V143
+									          H150							   
+									          L200,20" stroke="teal" stroke-width="10" fill="none" />
+							</defs>
+							<text x="50" y="50" fill="teal" font-size="25" font-family="'Lato', sans-serif">
+								<textPath xlink:href="#ruta_texto">Texto en ruta
+								</textPath>
+							</text>
+
+						</svg>
+						<h3>Texto en ruta</h3>
+
+
+					</article>
+					<article>
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+							width="300" height="150">
+							<defs>
+								<path id="ruta_texto_2" d="M10,75								          
+									          H270">
+									<animate attributeType="XML" attributeName="d" from="M10,75 H0" to="M10,75 H270"
+										dur="3s" begin="0s" repeatCount="indefinite">
+									</animate>
+								</path>
+							</defs>
+							<text fill="teal" font-size="25" font-family="'Lato', sans-serif">
+								<textPath xlink:href="#ruta_texto_2">Ruta animada con texto</textPath>
+							</text>
+						</svg>
+						<h3>Ruta animada con texto</h3>
+					</article>
+					<article>
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+							width="300" height="150">
+
+
+							<g>
+								<path id="rutafigura" transform="translate(10,30)" d="M0,0  H270 V100 H0" fill="none"
+									stroke="teal" stroke-width="5" stroke-dasharray="1 10" stroke-linecap="square">
+								</path>
+							</g>
+							<g transform="translate(10,30)">
+								<rect transform="translate(-10,-10)" id="rect1" width="20" height="20" fill="teal"
+									stroke="burlywood">
+									<animateMotion begin="rect1.click" dur="10s" repeatCount="1" fill="freeze">
+										<mpath xlink:href="#rutafigura" />
+									</animateMotion>
+								</rect>
+							</g>
+
+
+						</svg>
+						<h3>Figura animada</h3>
+					</article>
+					<article>
+						<svg>
+							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+								version="1.1" width="300" height="150"></svg>
+							<g>
+								<text x="10" y="75" font-family="Verdana">
+									<animate attributeName="font-size" from="10" to="20" dur="10s"
+										repeatCount="indefinite" />
+
+									Tamaño texto animado
+								</text>
+							</g>
+						</svg>
+						<h3>Tamaño texto animado</h3>
+					</article>
+
+				</div>
+			</section>
+		</main>
+		<footer>
+			<h2>Pie</h2>
+		</footer>
+	</div>
+
+	<script src="./assets/js/canvas.js"></script>
+</body>
+
+</html>

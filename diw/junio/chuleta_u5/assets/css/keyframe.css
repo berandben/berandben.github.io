@@ -1,0 +1,92 @@
+#keyframes article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+#keyframes .container {
+  border: 1px solid grey;
+  width: 50rem;
+  height: 50rem;
+  position: relative;
+}
+
+#keyframes .box {
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  background-color: teal;
+  border: 1px solid burlywood;
+
+  animation-name: demo-animation;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+}
+
+@keyframes demo-animation {
+  from {
+    transform: translate(0);
+    border-radius: 0;
+  }
+
+  10% {
+    transform: translateX(450px);
+  }
+
+  20% {
+    transform: translate(450px, 450px);
+  }
+
+  30% {
+    transform: translate(0, 450px);
+  }
+
+  40% {
+    transform: translate(0);
+    border-radius: 0;
+    background-color: teal;
+  }
+
+  77.5% {
+    transform: translate(450px, 0);
+    border-radius: 100%;
+    background-color: brown;
+  }
+
+  80% {
+    transform: translate(338px, 450px) scale(2);
+  }
+
+  82.5% {
+    transform: translate(226px, 0);
+    background-color: greenyellow;
+  }
+
+  85% {
+    transform: translate(114px, 450px) scale(2);
+  }
+
+  to {
+    border-radius: 100%;
+    background-color: brown;
+    transform: translate(0, 0);
+  }
+}
+
+#keyframes article ul {
+  width: 50rem;
+  background-color: #ccc;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#keyframes article li {
+  font-size: 1.5rem;
+  padding: 1rem;
+}

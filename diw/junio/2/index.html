@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<!--Idioma predeterminado del texto de la página-->
+<html lang="es">
+	<!-- =============== Cabecera (metadatos)=============== -->
+
+	<head>
+		<!-- Título de la página-->
+		<title>EJERCICIO HEXÁGONOS</title>
+
+		<!-- Meta Título y Meta Descripción de la página -->
+		<meta name="title" content="EJERCICIO HEXÁGONOS" />
+		<meta name="description" content="EJERCICIO HEXÁGONOS" />
+
+		<!-- Juego de caracteres-->
+		<meta charset="UTF-8" />
+
+		<!-- Compatibilidad Edge-->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+		<!-- Adapta el ancho visible según el dispositivo-->
+		<!-- width=device-width El ancho de la página será igual al ancho de la interfaz del dispositivo -->
+		<!-- initial-scale=1.0 Zoom al cargar la página -->
+		<!-- user-scalable=no No se permite al usuario hacer zoom -->
+		<!-- maximun-scalable=1 Máximo de zoom permitido -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- Autor -->
+		<meta name="autor" content="JJMB" />
+
+		<!-- Enlace a la hoja de estilos -->
+		<link href="assets/css/main.css" rel="stylesheet" type="text/css" />
+
+		<!-- Enlace al favicon -->
+		<link rel="icon" type="image/png" sizes="96x96" href="assets/media/img/favicon/favicon.png" />
+	</head>
+
+	<!-- =============== Cuerpo de la página =============== -->
+
+	<body>
+		<header>
+			<section>
+				<article>
+					<h1>HEXÁGONO</h1>
+				</article>
+			</section>
+		</header>
+		<main>
+			<section>
+				<article>
+					<picture>
+						<source media="(min-width: 600px)" srcset="./assets/media/img/1200.jpg" />
+						<img src="./assets/media/img/600.jpg" alt="Composición_responsiva" />
+					</picture>
+				</article>
+				<article>
+					<div id="contenedor_animacion">
+						<div class="cuadrado uno"></div>
+						<div class="cuadrado dos"></div>
+						<div class="cuadrado tres"></div>
+					</div>
+				</article>
+				<article>
+					<canvas id="hexagono-canvas" width="302" height="318"></canvas>
+				</article>
+				<article>
+					<svg xmlns="http://www.w3.org/2000/svg" width="302px" height="318px">
+						<g transform="translate(76,34)">
+							<path
+								d="
+						M0,0
+						H145
+						L217,125 
+						L145,250 
+						H0
+						L-70,125
+						Z"
+								stroke=" red"
+								fill="aqua"
+								id="futuro-hexagono"
+							/>
+						</g>
+						<g transform="translate(76,34)">
+							<circle id="circulosvg" r="5" stroke="red" stroke-width="4" fill="white">
+								<animateMotion begin="circulosvg.click" dur="6s">
+									<mpath xlink:href="#futuro-hexagono"></mpath>
+								</animateMotion>
+							</circle>
+						</g>
+					</svg>
+				</article>
+				<article id="contenedor-video">
+					<video id="video-player" width="302" height="250" poster="assets/media/img/600.jpg" preload="metadata">
+						<source src="assets/media/video/pexels.com_ID_4995289.mp4" type="video/mp4" />
+
+						<p>Elemento video no soportado por su navegador</p>
+					</video>
+				</article>
+				<article id="interactividad">
+					<div class="btns">
+						<div class="btns_fila">
+							<button class="btn btn1">Botón 1</button>
+							<button class="btn btn2">Botón 2</button>
+							<button class="btn btn3">Botón 3</button>
+						</div>
+						<div class="btns_fila">
+							<button class="btn btn4">Botón 4</button>
+							<button class="btn btn5">Botón 5</button>
+							<button class="btn btn6">Botón 6</button>
+						</div>
+					</div>
+				</article>
+			</section>
+		</main>
+		<footer>
+			<div>
+				<table class="ws-table-all notranslate">
+					<tbody>
+						<tr>
+							<th style="width: 20%">Attribute</th>
+							<th style="width: 20%">Value</th>
+							<th style="width: 50%">Description</th>
+						</tr>
+						<tr>
+							<td><a href="https://www.w3schools.com/tags/att_video_autoplay.asp">autoplay</a></td>
+							<td>autoplay</td>
+							<td>Specifies that the video will start playing as soon as it is ready</td>
+						</tr>
+						<tr>
+							<td><a href="https://www.w3schools.com/tags/att_video_controls.asp">controls</a></td>
+							<td>controls</td>
+							<td>Specifies that video controls should be displayed (such as a play/pause button etc).</td>
+						</tr>
+						<tr>
+							<td><a href="https://www.w3schools.com/tags/att_video_height.asp">height</a></td>
+							<td><i>pixels</i></td>
+							<td>Sets the height of the video player</td>
+						</tr>
+						<tr>
+							<td><a href="https://www.w3schools.com/tags/att_video_loop.asp">loop</a></td>
+							<td>loop</td>
+							<td>Specifies that the video will start over again, every time it is finished</td>
+						</tr>
+						<tr>
+							<td><a href="https://www.w3schools.com/tags/att_video_muted.asp">muted</a></td>
+							<td>muted</td>
+							<td>Specifies that the audio output of the video should be muted</td>
+						</tr>
+						<tr>
+							<td><a href="https://www.w3schools.com/tags/att_video_poster.asp">poster</a></td>
+							<td><em>URL</em></td>
+							<td>
+								Specifies an image to be shown while the video is downloading, or until the user hits the play
+								button
+							</td>
+						</tr>
+						<tr>
+							<td><a href="https://www.w3schools.com/tags/att_video_preload.asp">preload</a></td>
+							<td>
+								auto<br />
+								metadata<br />
+								none
+							</td>
+							<td>Specifies if and how the author thinks the video should be loaded when the page loads</td>
+						</tr>
+						<tr>
+							<td><a href="https://www.w3schools.com/tags/att_video_src.asp">src</a></td>
+							<td><i>URL</i></td>
+							<td>Specifies the URL of the video file</td>
+						</tr>
+						<tr>
+							<td><a href="https://www.w3schools.com/tags/att_video_width.asp">width</a></td>
+							<td><i>pixels</i></td>
+							<td>Sets the width of the video player</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</footer>
+
+		<!-- ############################ -->
+		<!-- jQuery alternativo en CDN -->
+		<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+		<!-- ############################ -->
+
+		<script src="assets/js/jquery-3.6.0.min.js"></script>
+		<script src="assets/js/canvas.js"></script>
+		<script src="assets/js/main.js"></script>
+	</body>
+</html>

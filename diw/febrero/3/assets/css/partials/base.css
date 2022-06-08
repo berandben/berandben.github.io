@@ -1,0 +1,60 @@
+html {
+	font-size: 0.625rem;
+	font-family: "Roboto", sans-serif;
+}
+
+header {
+	background-color: var(--primary-color);
+}
+
+aside.aside-left {
+	background-color: var(--secondary-color);
+}
+
+aside.aside-right {
+	background-color: var(--secondary-color);
+}
+
+footer {
+	background-color: var(--primary-color);
+	margin-top: 0.5rem;
+}
+
+section {
+	background-color: var(--quaternary-color);
+	margin: 1rem;
+}
+
+article {
+	padding: 1rem;
+	margin: 1rem;
+	background-color: var(--tertiary-color);
+}
+
+h1,
+h2 {
+	text-align: center;
+	padding: 1rem;
+}
+
+h3 {
+	padding: 0.5rem;
+}
+
+h1 {
+	font-size: 2rem;
+	font-weight: 900;
+}
+
+h2,
+h3 {
+	font-size: 1.7rem;
+	font-weight: 500;
+}
+
+p {
+	font-size: 1.5rem;
+	text-align: justify;
+	text-justify: inter-word;
+	line-height: 2.5rem;
+}

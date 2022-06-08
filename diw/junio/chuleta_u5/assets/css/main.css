@@ -1,0 +1,247 @@
+@charset "UTF-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;900&display=swap");
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Roboto/Roboto-Regular.ttf");
+}
+
+/*##############################################################
+ESTILOS BASE ----- INICIO
+##############################################################*/
+
+/*##############################################################
+RESET
+##############################################################*/
+
+/************************
+Estilos base para los elementos indicados
+*************************/
+html,
+body,
+header,
+nav,
+ul,
+main,
+section,
+article,
+aside,
+footer,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+div,
+a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: 100;
+  font-size: 100%;
+}
+
+/************************
+Evita añadir el borde o padding al width
+*************************/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/************************
+Tomando el tamaño de fuente habitual de los 
+navegadores (16px), 0.625 serían 10px
+lo que facilita los cálculos cuando se usen
+unidades rem.
+*************************/
+html {
+  font-size: 0.625rem;
+}
+
+/*##############################################################
+ENCABEZADOS
+##############################################################*/
+h1 {
+  font-size: 2.8rem;
+  margin: 2rem;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 2.3rem;
+  margin: 2rem;
+}
+
+h3 {
+  font-size: 2.1rem;
+  margin: 2rem;
+}
+
+h4 {
+  font-size: 1.9rem;
+}
+
+h5 {
+  font-size: 1.5rem;
+}
+
+/*##############################################################
+PÁRRAFOS
+##############################################################*/
+p {
+  font-size: 1.5rem;
+}
+
+/*##############################################################
+LISTAS
+##############################################################*/
+ul {
+  list-style-type: none;
+}
+
+/*##############################################################
+ENLACES
+##############################################################*/
+a {
+  text-decoration: none;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: black;
+}
+
+/*##############################################################
+ESTILOS BASE ----- FIN
+##############################################################*/
+
+/* body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+} */
+
+.body-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 15rem minmax(calc(100vh - 25rem), 1fr) 10rem;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+main > * {
+  border: 1px solid grey;
+}
+
+header {
+  grid-area: header;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  grid-area: main;
+
+  display: grid;
+  grid-template-rows: 90rem 120rem 120rem 120rem 150rem 1fr;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "filtros"
+    "transformaciones"
+    "transiciones"
+    "keyframes"
+    "canvas-sec"
+    "svg-sec";
+}
+
+h2,
+h3 {
+  text-align: center;
+}
+
+section p {
+  text-align: center;
+}
+
+footer {
+  grid-area: footer;
+  color: white;
+  background-color: grey;
+}
+
+#filtros {
+  grid-area: filtros;
+}
+
+#transformaciones {
+  grid-area: transformaciones;
+}
+#transiciones {
+  grid-area: transiciones;
+}
+#keyframes {
+  grid-area: keyframes;
+}
+#canvas-sec {
+  grid-area: canvas-sec;
+}
+
+#svg-sec {
+  grid-area: svg-sec;
+}
+
+.box {
+  background-color: teal;
+  border: 1px solid burlywood;
+}
+
+.container {
+  border: 1px solid grey;
+}
+
+section ul:nth-child(2) {
+  border: 2px solid red;
+  background-color: gold;
+}
+
+section ul:nth-child(2) li {
+  text-align: center;
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+section ul:nth-child(2) li a {
+  text-decoration: underline;
+}
+
+/*##############################################################
+MEDIA QUERIES ANCHO MÍNIMO 768 ----- INICIO
+##############################################################*/
+@media only screen and (min-width: 768px) {
+  main {
+    grid-template-rows: 90rem 100rem 120rem 120rem 150rem 1fr;
+  }
+}
+
+@media only screen and (min-width: 1520px) {
+  main {
+    grid-template-rows: 90rem 70rem 120rem 120rem 100rem 1fr;
+  }
+}
+
+/*##############################################################
+MEDIA QUERIES ANCHO MÍNIMO 768 ----- FIN
+##############################################################*/

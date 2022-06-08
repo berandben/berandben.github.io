@@ -1,0 +1,26 @@
+#canvas-sec article ul {
+  background-color: #ccc;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#canvas-sec article li {
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+#canvas-sec article {
+  border: 1px solid green;
+  width: 30rem;
+}
+
+#canvas-sec > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 2rem;
+  padding: 2rem;
+}

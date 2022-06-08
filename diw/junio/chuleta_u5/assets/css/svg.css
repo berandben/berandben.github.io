@@ -1,0 +1,12 @@
+#svg-sec article {
+	border: 1px solid green;
+	width: 30rem;
+}
+
+#svg-sec > div {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	gap: 2rem;
+	padding: 2rem;
+}

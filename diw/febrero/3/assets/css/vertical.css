@@ -1,0 +1,44 @@
+@import url("../css/index.css");
+
+div#content-wrapper {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 95px minmax(calc(100vh - 175px), 1fr) 250px 80px;
+	grid-template-areas:
+		"header"
+		"main"
+		"aside-left"
+		"footer";
+}
+
+@media only screen and (min-width: 768px) {
+	div#content-wrapper {
+		grid-template-columns: 2fr 10fr;
+		grid-template-rows: 95px minmax(calc(100vh - 175px), 1fr) 80px;
+
+		grid-template-areas:
+			"header header"
+			"aside-left main"
+			"footer footer";
+	}
+
+	main {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: 50px 1fr;
+		grid-template-areas:
+			"h1 h1"
+			"seccion1 seccion2";
+	}
+
+	main h1 {
+		grid-area: h1;
+	}
+
+	main section:nth-child(2) {
+		grid-area: seccion1;
+	}
+	main section:nth-child(3) {
+		grid-area: seccion2;
+	}
+}

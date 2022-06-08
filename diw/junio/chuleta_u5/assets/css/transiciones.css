@@ -1,0 +1,50 @@
+#transiciones > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+#transiciones > div > article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#transiciones .container {
+  width: 30rem;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#transiciones .box {
+  width: 10rem;
+  height: 10rem;
+
+  transition-property: transform, border-radius, background-color;
+  transition-duration: 1s, 3s, 5s;
+  transition-timing-function: ease-in-out;
+}
+
+#transiciones .box:hover {
+  transform: scale(2) rotate(45deg);
+  border-radius: 10rem;
+  background-color: palevioletred;
+}
+
+#transiciones article ul {
+  width: 50rem;
+  background-color: #ccc;
+  padding: 2rem;
+}
+
+#transiciones article li {
+  font-size: 1.5rem;
+  padding: 1rem;
+}

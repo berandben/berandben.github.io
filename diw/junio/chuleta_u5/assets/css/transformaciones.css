@@ -1,0 +1,44 @@
+#transformaciones > div {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	gap: 2rem;
+	padding: 2rem;
+}
+
+#transformaciones article {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 25rem;
+}
+
+#transformaciones .container {
+	width: 10rem;
+	height: 10rem;
+}
+
+#transformaciones .box {
+	width: 5rem;
+	height: 5rem;
+}
+
+#transformaciones > div:nth-child(4) article:nth-child(2) .box {
+	transform: translate(50px, 50px);
+}
+
+#transformaciones > div:nth-child(4) article:nth-child(3) .box {
+	transform: scale(0.5, 0.5);
+}
+
+#transformaciones > div:nth-child(4) article:nth-child(4) .box {
+	transform: rotate(30deg);
+}
+
+#transformaciones > div:nth-child(4) article:nth-child(5) .box {
+	transform: skew(20deg, 20deg);
+}
+
+#transformaciones > div:nth-child(4) article:nth-child(6) .box {
+	transform: matrix(1, 0, 0.6, 1, 25, 0);
+}

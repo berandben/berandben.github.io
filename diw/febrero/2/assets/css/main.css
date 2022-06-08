@@ -1,0 +1,275 @@
+@charset "UTF-8";
+
+/*********************************************************************************/
+
+/*http://www.w3big.com/es/cssref/css-websafe-fonts.html*/
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+@font-face {
+  font-family: "SupermercadoOne";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Supermercado_One/SupermercadoOne-Regular.ttf");
+}
+
+/**********************************************************************************/
+
+/*##############################################################
+RESET
+##############################################################*/
+
+/************************
+Estilos base para los elementos indicados
+*************************/
+html,
+body,
+header,
+nav,
+ul,
+main,
+section,
+article,
+aside,
+footer,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+div,
+a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: 100;
+  font-size: 100%;
+}
+
+/************************
+Evita añadir el borde o padding al width
+*************************/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/************************
+Tomando el tamaño de fuente habitual de los 
+navegadores (16px), 0.625 serían 10px
+lo que facilita los cálculos cuando se usen
+unidades rem.
+*************************/
+html {
+  font-size: 0.625rem;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 2.3rem;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 1.9rem;
+  font-weight: 500;
+}
+
+#body-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 8fr;
+
+  /* Zona central
+  margin 2 + 2 rem
+  gap  2 + 2 rem
+  header y footer 20 + 15 rem
+  Total 43 rem  
+  */
+  grid-template-rows: 20rem minmax(calc(100vh - 43rem), 1fr) 15rem;
+  grid-template-areas:
+    "header header header"
+    "nav aside main"
+    "footer footer footer";
+  margin: 2rem;
+  gap: 2rem;
+}
+
+header {
+  grid-area: header;
+  border: 1px solid #ccc;
+}
+
+nav {
+  grid-area: nav;
+  border: 1px solid #ccc;
+}
+
+aside {
+  grid-area: aside;
+  border: 1px solid #ccc;
+}
+
+main {
+  grid-area: main;
+  border: 1px solid #ccc;
+}
+
+footer {
+  grid-area: footer;
+  border: 1px solid #ccc;
+}
+
+#header-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#header-wrapper h1 {
+  font-family: "Nunito", sans-serif;
+}
+
+#header-wrapper h1:hover {
+  color: blue;
+}
+
+#header-wrapper img {
+  width: 10rem;
+}
+
+#header-wrapper h2 {
+  font-family: "SupermercadoOne", serif;
+}
+
+nav > ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+}
+
+nav > ul li {
+  font-size: 2rem;
+}
+
+nav > ul li a {
+  text-decoration: none;
+  border: 1px groove #ccc;
+  padding: 1rem;
+}
+
+nav > ul li a:hover {
+  background-color: cadetblue;
+}
+
+#content-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: "form section";
+}
+
+#content-wrapper section:nth-child(1) {
+  grid-area: form;
+  border: 1px solid #ccc;
+  font-size: 1.7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#content-wrapper section:nth-child(1) form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70%;
+}
+
+fieldset.form-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+fieldset.required-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 40%;
+}
+
+input:invalid,
+select:invalid {
+  border: 1px solid red;
+}
+
+#content-wrapper section:nth-child(2) {
+  grid-area: section;
+  border: 1px solid #ccc;
+}
+
+#content-wrapper section h3 {
+  text-align: center;
+}
+
+#content-wrapper article h4 {
+  text-align: center;
+}
+
+#content-wrapper article p {
+  font-family: SupermercadoOne, serif;
+  text-transform: capitalize;
+
+  font-size: 1.7rem;
+  column-count: 3;
+  column-gap: 20px;
+  column-rule: 1px solid #ccc;
+  background-image: url("../img/background/base.png");
+  padding: 2rem;
+}
+
+@media only screen and (max-width: 767px) {
+  #body-wrapper {
+    grid-template-columns: 1fr;
+
+    grid-template-rows: 20rem 1fr 15rem;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+    margin: 2rem;
+    gap: 2rem;
+  }
+
+  aside,
+  nav {
+    display: none;
+  }
+
+  #content-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "form"
+      "section";
+  }
+}

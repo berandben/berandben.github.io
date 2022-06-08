@@ -1,0 +1,20 @@
+#filtros {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#filtros ul:nth-child(3) li {
+  font-size: 1.7rem;
+  padding: 1rem;
+}
+
+#filtros ul:nth-child(3) {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ccc;
+}

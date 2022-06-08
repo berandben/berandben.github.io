@@ -1,0 +1,40 @@
+/*##############################################################
+RESET
+##############################################################*/
+
+/************************
+Estilos base para los elementos indicados
+*************************/
+html,
+body,
+header,
+nav,
+ul,
+main,
+section,
+article,
+aside,
+footer,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+div,
+a {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-weight: 100;
+	font-size: 100%;
+}
+
+/************************
+Evita sumar el borde o padding 
+*************************/
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}

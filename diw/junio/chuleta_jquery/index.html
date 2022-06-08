@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<!--Idioma predeterminado del texto de la página-->
+<html lang="es">
+	<!-- =============== Cabecera (metadatos)=============== -->
+
+	<head>
+		<!-- Título de la página-->
+		<title>CHULETA jQuery</title>
+
+		<!-- Meta Título y Meta Descripción de la página -->
+		<meta name="title" content="DIW" />
+		<meta name="description" content="DIW" />
+
+		<!-- Juego de caracteres-->
+		<meta charset="UTF-8" />
+
+		<!-- Compatibilidad Edge-->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+		<!-- Adapta el ancho visible según el dispositivo-->
+		<!-- width=device-width El ancho de la página será igual al ancho de la interfaz del dispositivo -->
+		<!-- initial-scale=1.0 Zoom al cargar la página -->
+		<!-- user-scalable=no No se permite al usuario hacer zoom -->
+		<!-- maximun-scalable=1 Máximo de zoom permitido -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- Autor -->
+		<meta name="autor" content="JJMB" />
+
+		<!-- Enlace a la hoja de estilos -->
+		<link href="assets/css/main.css" rel="stylesheet" type="text/css" />
+
+		<!-- Enlace al favicon -->
+		<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon/favicon.png" />
+	</head>
+
+	<!-- =============== Cuerpo de la página =============== -->
+
+	<body>
+		<div class="body-wrapper">
+			<header>
+				<h1>Chuleta jQuery</h1>
+				<ul>
+					<li>
+						<a href="./assets/css/main.css" target="_blank">main.css</a>
+					</li>
+				</ul>
+			</header>
+			<main>
+				<section>
+					<h2>Radio</h2>
+					<div class="articles">
+						<article>
+							<input type="radio" id="radio_1" name="input-radio" value="1" checked />
+							<label for="dis_1">Radio 1</label>
+
+							<input type="radio" id="radio_2" name="input-radio" value="2" />
+							<label for="dis_2">Radio 2</label>
+
+							<input type="radio" id="radio_3" name="input-radio" value="3" />
+							<label for="dis_3">Radio 3</label>
+						</article>
+						<article><div class="salida"></div></article>
+					</div>
+				</section>
+				<section>
+					<h2>Checkbox</h2>
+					<div class="articles">
+						<article>
+							<input class="checkbox" type="checkbox" id="checkbox1" name="checkbox1" value="Checkbox1" />
+							<label for="checkbox1">Checkbox 1</label>
+
+							<input class="checkbox" type="checkbox" id="checkbox2" name="checkbox2" value="Checkbox2" />
+							<label for="checkbox2">Checkbox 2</label>
+
+							<input class="checkbox" type="checkbox" id="checkbox3" name="checkbox3" value="Checkbox3" />
+							<label for="checkbox3">Checkbox 3</label>
+						</article>
+						<article><div class="salida"></div></article>
+					</div>
+				</section>
+				<section>
+					<h2>Select</h2>
+					<div class="articles">
+						<article>
+							<label for="selector">Selecciona:</label>
+							<select id="selector">
+								<option value="select1">Select1</option>
+								<option value="select2">Select2</option>
+								<option value="select3">Select3</option>
+							</select>
+						</article>
+						<article><div class="salida"></div></article>
+					</div>
+				</section>
+				<section>
+					<h2>Input Text</h2>
+					<div class="articles">
+						<article>
+							<label for="input-text">Texto:</label>
+							<input type="text" id="input-text" name="input-text" size="20" />
+						</article>
+						<article><div class="salida"></div></article>
+					</div>
+				</section>
+				<section>
+					<h2>Input Number</h2>
+					<div class="articles">
+						<article>
+							<label for="input-number">Valor:</label>
+							<input type="number" id="input-number" max="100" min="0" value="0" />
+						</article>
+						<article><div class="salida"></div></article>
+					</div>
+				</section>
+				<section>
+					<h2>Video</h2>
+					<div class="articles">
+						<article>
+							<video id="video-player" width="300" height="160" controls preload="metadata">
+								<source src="./assets/media/video/naturaleza.mp4" type="video/mp4" />
+
+								<p>Elemento video no soportado por su navegador</p>
+							</video>
+							<button>Info</button>
+						</article>
+						<article><div class="salida"></div></article>
+					</div>
+				</section>
+				<section>
+					<h2>Manipulación Video</h2>
+					<div class="articles">
+						<article>
+							<button id="btn_controls">Controls</button>
+							<button id="btn_play">Play</button>
+						</article>
+					</div>
+				</section>
+			</main>
+			<footer></footer>
+		</div>
+		<script src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script src="./assets/js/main.js"></script>
+	</body>
+</html>

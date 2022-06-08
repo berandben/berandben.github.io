@@ -1,0 +1,419 @@
+@charset "UTF-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;900&display=swap");
+
+@font-face {
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: 400;
+	src: url("../fonts/Roboto/Roboto-Regular.ttf");
+}
+
+/*##############################################################
+ESTILOS BASE ----- INICIO
+##############################################################*/
+
+/*##############################################################
+RESET
+##############################################################*/
+
+/************************
+Estilos base para los elementos indicados
+*************************/
+html,
+body,
+header,
+nav,
+ul,
+main,
+section,
+article,
+aside,
+footer,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+div,
+a {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-weight: 100;
+	font-size: 100%;
+}
+
+/************************
+Evita añadir el borde o padding al width
+*************************/
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/************************
+Tomando el tamaño de fuente habitual de los 
+navegadores (16px), 0.625 serían 10px
+lo que facilita los cálculos cuando se usen
+unidades rem.
+*************************/
+html {
+	font-size: 0.625rem;
+}
+
+/*##############################################################
+ENCABEZADOS
+##############################################################*/
+h1 {
+	font-size: 2.8rem;
+	margin: 2rem;
+	font-weight: 900;
+}
+
+h2 {
+	font-size: 2.3rem;
+	margin: 2rem;
+}
+
+h3 {
+	font-size: 2.1rem;
+	margin: 2rem;
+}
+
+h4 {
+	font-size: 1.9rem;
+}
+
+h5 {
+	font-size: 1.5rem;
+}
+
+/*##############################################################
+PÁRRAFOS
+##############################################################*/
+p {
+	font-size: 1.5rem;
+}
+
+/*##############################################################
+LISTAS
+##############################################################*/
+ul {
+	list-style-type: none;
+}
+
+/*##############################################################
+ENLACES
+##############################################################*/
+a {
+	text-decoration: none;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+	color: black;
+}
+
+/*##############################################################
+ESTILOS BASE ----- FIN
+##############################################################*/
+
+body {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 20rem minmax(calc(100vh - 45rem), 1fr) 25rem;
+	grid-template-areas:
+		"header"
+		"main"
+		"footer";
+}
+
+header {
+	grid-area: header;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+	grid-template-areas: "header-section";
+}
+
+header section {
+	grid-area: header-section;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+main {
+	grid-area: main;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+	grid-template-areas: "main-section";
+	place-items: center;
+}
+
+main section {
+	grid-area: main-section;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+section {
+	gap: 2rem;
+	padding: 2rem;
+}
+
+main article {
+	border: 1px solid black;
+	display: flex;
+	justify-content: center;
+	width: 31rem;
+	height: 32.5rem;
+}
+
+picture {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+img {
+	max-width: 28rem;
+}
+
+#contenedor_animacion {
+	width: 30rem;
+	height: 31.6rem;
+
+	background-image: url("../media/img/hexagono.svg");
+	background-size: 30rem 31.6rem;
+	position: relative;
+}
+
+.cuadrado {
+	position: absolute;
+	width: 2rem;
+	height: 2rem;
+	border: 1px solid black;
+}
+
+.cuadrado.uno {
+	animation-name: animacion-hexagono;
+	animation-duration: 6s;
+	animation-iteration-count: 1;
+	background-color: rgba(255, 0, 0);
+	z-index: 1;
+	transform: translate(14rem, 2.5rem);
+}
+
+.cuadrado.dos {
+	animation-name: animacion-hexagono;
+	animation-duration: 6s;
+	animation-iteration-count: 1;
+	animation-direction: reverse;
+	background-color: green;
+	z-index: 1;
+	transform: translate(14rem, 2.5rem);
+}
+
+.cuadrado.tres {
+	z-index: 0;
+	background-color: black;
+	animation-name: animacion-circulo;
+	animation-duration: 6s;
+	animation-iteration-count: 1;
+	animation-delay: 2s;
+	animation-fill-mode: forwards;
+
+	border-radius: 2rem;
+	transform: translate(14rem, 15rem);
+	filter: opacity(0);
+}
+
+@keyframes animacion-circulo {
+	from {
+		filter: opacity(1);
+		width: 10rem;
+		height: 10rem;
+		border-radius: 10rem;
+		transform: translate(10rem, 11rem);
+	}
+
+	to {
+		width: 25rem;
+		height: 25rem;
+
+		border-radius: 25rem;
+		transform: translate(2.5rem, 3.5rem);
+		filter: opacity(0.3);
+	}
+}
+
+@keyframes animacion-hexagono {
+	from {
+		transform: translate(14rem, 2.5rem) scale(1);
+	}
+
+	10% {
+		transform: translate(21rem, 2.5rem) scale(1.12);
+		background-color: rgba(255, 255, 0);
+	}
+
+	25% {
+		transform: translate(28rem, 15rem) scale(1.5);
+		background-color: rgba(255, 255, 255);
+	}
+
+	40% {
+		transform: translate(21rem, 27rem) scale(1.75);
+		background-color: rgba(255, 0, 255);
+	}
+
+	50% {
+		transform: translate(14rem, 27rem) scale(2);
+	}
+
+	60% {
+		transform: translate(7rem, 27rem);
+		background-color: rgba(0, 0, 255);
+	}
+
+	75% {
+		transform: translate(0rem, 15rem);
+		background-color: rgba(0, 0, 0);
+	}
+
+	90% {
+		transform: translate(7rem, 2.5rem);
+		background-color: rgba(100, 100, 100);
+	}
+
+	to {
+		transform: translate(14rem, 2.5rem);
+	}
+}
+
+svg {
+	/* background-image: url("../media/img/hexagono.png");*/
+}
+
+video {
+	/* border: 1px solid red; */
+}
+
+footer {
+	grid-area: footer;
+	border: 1px solid black;
+	display: flex;
+	justify-content: center;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+th,
+td {
+	font-size: 1.2rem;
+}
+
+.rojo {
+	color: red;
+	font-size: 1.5rem;
+}
+
+#contenedor-video {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#interactividad {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
+}
+
+.btns {
+	height: 75%;
+	width: 100%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.btns_fila {
+	padding: 2rem;
+	width: 30rem;
+	height: 9.5rem;
+	display: flex;
+}
+.btn {
+	width: 8rem;
+	height: 5rem;
+	margin: 0.1rem;
+	cursor: pointer;
+	border: 1px solid black;
+	font-size: 1.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/*##############################################################
+MEDIA QUERIES ANCHO MÍNIMO ----- INICIO
+##############################################################*/
+@media only screen and (min-width: 600px) {
+	header section {
+		flex-direction: row;
+	}
+
+	main section {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		grid-template-areas:
+			"article1 article2 article3"
+			"article4 article5 article6";
+	}
+
+	main section article:nth-child(1) {
+		grid-area: article1;
+	}
+	main section article:nth-child(2) {
+		grid-area: article2;
+	}
+
+	main section article:nth-child(3) {
+		grid-area: article3;
+	}
+	main section article:nth-child(4) {
+		grid-area: article4;
+	}
+	main section article:nth-child(5) {
+		grid-area: article5;
+	}
+	main section article:nth-child(6) {
+		grid-area: article6;
+	}
+}
+
+/*##############################################################
+MEDIA QUERIES ANCHO MÍNIMO ----- FIN
+##############################################################*/

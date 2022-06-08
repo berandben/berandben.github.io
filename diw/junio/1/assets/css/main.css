@@ -1,0 +1,275 @@
+@charset "UTF-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;900&display=swap");
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Roboto/Roboto-Regular.ttf");
+}
+
+/*##############################################################
+ESTILOS BASE ----- INICIO
+##############################################################*/
+
+/*##############################################################
+RESET
+##############################################################*/
+
+/************************
+Estilos base para los elementos indicados
+*************************/
+html,
+body,
+header,
+nav,
+ul,
+main,
+section,
+article,
+aside,
+footer,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+div,
+a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: 100;
+  font-size: 100%;
+}
+
+/************************
+Evita añadir el borde o padding al width
+*************************/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/************************
+Tomando el tamaño de fuente habitual de los 
+navegadores (16px), 0.625 serían 10px
+lo que facilita los cálculos cuando se usen
+unidades rem.
+*************************/
+html {
+  font-size: 0.625rem;
+}
+
+/*##############################################################
+ENCABEZADOS
+##############################################################*/
+h1 {
+  font-size: 2.8rem;
+  margin: 2rem;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 2.3rem;
+  margin: 2rem;
+}
+
+h3 {
+  font-size: 2.1rem;
+  margin: 2rem;
+}
+
+h4 {
+  font-size: 1.9rem;
+}
+
+h5 {
+  font-size: 1.5rem;
+}
+
+/*##############################################################
+PÁRRAFOS
+##############################################################*/
+p {
+  font-size: 1.5rem;
+}
+
+/*##############################################################
+LISTAS
+##############################################################*/
+ul {
+  list-style-type: none;
+}
+
+/*##############################################################
+ENLACES
+##############################################################*/
+a {
+  text-decoration: none;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: black;
+}
+
+/*##############################################################
+ESTILOS BASE ----- FIN
+##############################################################*/
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 20rem minmax(calc(100vh - 26rem), 1fr);
+
+  grid-template-areas:
+    "header"
+    "main";
+  padding: 2rem 2rem 0;
+  gap: 2rem;
+}
+
+header {
+  grid-area: header;
+
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+header span {
+  font-size: 1.7rem;
+}
+
+header img {
+  height: 12rem;
+  transition-property: transform, border;
+  transition-duration: 1s, 3s;
+}
+
+header img:hover {
+  transform: rotate(90deg);
+  border: 1px solid red;
+}
+
+main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 30rem 1fr;
+  grid-template-areas:
+    "section1"
+    "section2";
+  gap: 2rem;
+}
+
+main h2,
+main h3 {
+  text-align: center;
+}
+
+main section:nth-child(1) {
+  border: 1px solid black;
+  grid-area: section1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+#animacion {
+  width: 120rem;
+  height: 16.9rem;
+  border: 1px solid black;
+  position: relative;
+}
+
+main section:nth-child(1) img {
+  width: 30rem;
+  position: absolute;
+
+  animation-name: animacion-imagen;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes animacion-imagen {
+  from {
+    /* left: 0; */
+    transform: translateX(0) scale(1);
+  }
+
+  50% {
+    /* left: 45rem; */
+    transform: translateX(45rem) scale(0);
+  }
+
+  to {
+    /* left: 90rem; */
+    filter: invert(100);
+    transform: translateX(90rem) scale(1);
+  }
+}
+
+main section:nth-child(2) {
+  border: 1px solid black;
+  grid-area: section2;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 10rem 1fr;
+  grid-template-areas:
+    "title title"
+    "block1 block2";
+  gap: 2rem;
+  padding: 2rem;
+}
+
+main section:nth-child(2) h2 {
+  grid-area: title;
+}
+
+main section:nth-child(2) article:nth-child(2) {
+  border: 1px solid black;
+  grid-area: block1;
+}
+
+main section:nth-child(2) article:nth-child(3) {
+  border: 1px solid black;
+  grid-area: block2;
+}
+
+button {
+  width: 100%;
+  height: 5rem;
+}
+
+#bloque2 div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*##############################################################
+MEDIA QUERIES ANCHO MÍNIMO 768 ----- INICIO
+##############################################################*/
+@media only screen and (min-width: 768px) {
+}
+
+/*##############################################################
+MEDIA QUERIES ANCHO MÍNIMO 768 ----- FIN
+##############################################################*/

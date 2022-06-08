@@ -1,0 +1,286 @@
+@charset "UTF-8";
+
+/*##############################################################
+RESET
+##############################################################*/
+
+/************************
+Estilos base para los elementos indicados
+*************************/
+html,
+body,
+header,
+nav,
+ul,
+main,
+section,
+article,
+aside,
+footer,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+div,
+a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: 100;
+  font-size: 100%;
+}
+
+/************************
+Evita añadir el borde o padding al width
+*************************/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/************************
+Tomando el tamaño de fuente habitual de los 
+navegadores (16px), 0.625 serían 10px
+lo que facilita los cálculos cuando se usen
+unidades rem.
+*************************/
+html {
+  font-size: 0.625rem;
+}
+
+#body-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr 6fr 1fr;
+  grid-template-areas:
+    "encabezado"
+    "lateral"
+    "contenido"
+    "pie";
+  justify-items: center;
+  gap: 3rem;
+  padding: 2rem;
+}
+
+header {
+  grid-area: encabezado;
+
+  border: 1px solid black;
+  border-radius: 4rem;
+}
+
+main {
+  grid-area: contenido;
+}
+
+aside {
+  grid-area: lateral;
+  border: 1px solid black;
+  border-radius: 4rem;
+  background-image: url("../img/fondo.png");
+  background-size: 50% 80%;
+
+  background-position: center;
+  width: 100%;
+}
+
+aside h2 span {
+  background-color: white;
+  padding: 1rem;
+}
+
+footer {
+  grid-area: pie;
+  border: 1px solid black;
+  border-radius: 4rem;
+  width: 100%;
+}
+
+#header-wrapper {
+  height: 100%;
+}
+
+#header-wrapper h1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+#header-wrapper h1 span:first-child {
+  color: red;
+  align-self: flex-start;
+  padding: 1rem;
+}
+
+#header-wrapper h1 span:nth-child(2) {
+  color: green;
+  padding: 1rem;
+}
+#header-wrapper h1 span:nth-child(3) {
+  color: brown;
+  align-self: flex-end;
+  padding: 1rem;
+}
+
+#header-wrapper img {
+  max-width: 30%;
+  height: 100%;
+  padding: 2rem;
+}
+
+main #content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "contenido1"
+    "contenido2";
+  gap: 3rem;
+}
+
+#first-section,
+#second-section {
+  border: 1px solid black;
+  border-radius: 4rem;
+}
+
+#first-section {
+  grid-area: contenido1;
+}
+#second-section {
+  grid-area: contenido2;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 1.9rem;
+}
+
+h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.7rem;
+  padding: 1rem;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.cards article:nth-child(-n + 2) {
+  display: none;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 3px dotted black;
+  max-width: 70%;
+}
+
+figure {
+  max-width: 50%;
+}
+
+.cards article img {
+  width: 100%;
+}
+
+.cards article:nth-child(odd) img {
+  background-color: teal;
+}
+.cards article:nth-child(even) img {
+  background-color: skyblue;
+}
+
+p,
+address {
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+.cards article p {
+  padding: 2rem;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+footer p {
+  cursor: pointer;
+}
+footer p > span {
+  display: none;
+}
+
+footer p:active > span {
+  display: inline-block;
+}
+
+@media only screen and (min-width: 600px) {
+  #body-wrapper {
+    grid-template-columns: 3fr 1.5fr;
+    grid-template-rows: 15rem 1fr 15rem;
+    grid-template-areas:
+      "encabezado encabezado"
+      "contenido  lateral"
+      "pie  lateral";
+    gap: 3rem;
+    padding: 2rem;
+    justify-items: initial;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 2rem;
+  }
+
+  .cards article:nth-child(-n + 2) {
+    display: flex;
+  }
+
+  article {
+    max-width: 30%;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+  }
+
+  h3 {
+    font-size: 1.9rem;
+  }
+
+  aside {
+    background-size: 100%;
+  }
+
+  main #content-wrapper {
+    height: 100%;
+  }
+
+  #header-wrapper img {
+    padding: 0;
+  }
+}

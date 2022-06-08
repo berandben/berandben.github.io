@@ -1,0 +1,11 @@
+/*##############################################################
+VARIABLES
+##############################################################*/
+:root {
+	--primary-color: #22577e;
+	--secondary-color: #5584ac;
+	--tertiary-color: #95d1cc;
+	--quaternary-color: #f6f2d4;
+	--dark-color: black;
+	--light-color: white;
+}
