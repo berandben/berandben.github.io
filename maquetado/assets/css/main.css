@@ -451,6 +451,7 @@ MEDIA QUERY
 	section.section-i-h .featured-i-h {
 		flex-direction: row;
 		gap: 3rem;
+		justify-content: space-between;
 	}
 
 	section.section-i-h .featured-i-h figure {
@@ -462,14 +463,13 @@ MEDIA QUERY
 		max-height: 30vw;
 	}
 
-	/* section.section-i-h .featured-i-h figure img {
-		width: 80%;
-		height: auto;
-	} */
-
 	/*##############################################################
 	SECTION I-B
 	##############################################################*/
+
+	section.section-i-b .featured-i-b {
+		min-width: 75vw;
+	}
 
 	section.section-i-b h3 {
 		font-size: 2rem;
@@ -485,7 +485,7 @@ MEDIA QUERY
 		gap: 5rem;
 		padding: 2rem 2rem 2rem 1rem;
 		background-color: var(--secondary-color);
-		min-width: 75vw;
+		width: 100%;
 	}
 
 	section.section-i-b .featured-i-b article div {
