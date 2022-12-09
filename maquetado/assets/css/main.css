@@ -47,18 +47,22 @@ VARIABLES
 	--primary-color: #47828f;
 	--secondary-color: #e8f0f1;
 	--tertiary-color: #1a1a1a;
-	--quaternary-color: #514b33;
+	--quaternary-color: #4cb3ed;
 	--dark-color: black;
 	--light-color: white;
+	--confirm-color: #1f1fff;
+	--confirm-color-hover: #0000d1;
+
+	--font-family-primary: "Roboto", sans-serif;
+
 	--valid-color: #005200;
 	--invalid-color: #8d1a11;
 	--danger-color: #750000;
 	--danger-color-hover: #a80000;
-	--accept-color: #1f1fff;
-	--accept-color-hover: #0000d1;
+
 	--bg-light-color: #f8f9f9;
 	--bg-valid-color: #e3fae3;
-	--font-family-primary: "Roboto", sans-serif;
+
 	--font-family-secondary: "Montserrat", sans-serif;
 	/*
      El ancho de la pantalla completo es el 100% del 
@@ -187,7 +191,7 @@ body {
 	display: grid;
 	grid-template-columns: 100vw;
 
-	grid-template-rows: 28.6rem minmax(calc(100vh - 43.1rem), 1fr) 16rem;
+	grid-template-rows: 28.6rem minmax(calc(100vh - 34.6rem), 1fr) 6rem;
 	grid-template-areas:
 		"header "
 		"main"
@@ -221,7 +225,7 @@ header .header-login a {
 }
 
 header .header-login a:hover {
-	color: var(--tertiary-color);
+	background-color: var(--confirm-color);
 }
 
 header .header-main {
@@ -286,6 +290,17 @@ main {
 }
 
 /*##############################################################
+SECTION
+##############################################################*/
+section {
+	border-top: 2px solid var(--secondary-color);
+}
+h2 {
+	font-size: 1.7rem;
+	color: var(--primary-color);
+}
+
+/*##############################################################
 SECTION I-H
 ##############################################################*/
 
@@ -296,12 +311,10 @@ section.section-i-h {
 	align-items: center;
 	gap: 2rem;
 	padding: 2rem;
-	border: 2px solid var(--secondary-color);
 }
 
 section.section-i-h h2 {
 	font-size: 2rem;
-	color: var(--primary-color);
 }
 
 section.section-i-h .featured-i-h {
@@ -326,28 +339,23 @@ section.section-i-h .featured-i-h figure img {
 }
 
 /*##############################################################
-SECTION I-B
+SECTION EVENT LIST
 ##############################################################*/
-section.section-i-b {
+section.event-list {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	gap: 2rem;
 	padding: 2rem;
-	border: 2px solid var(--secondary-color);
 }
 
-section.section-i-b h2 {
-	font-size: 1.7rem;
-	color: var(--primary-color);
-}
-section.section-i-b h3 {
+section.event-list h3 {
 	font-size: 1.5rem;
 	color: var(--tertiary-color);
 }
 
-section.section-i-b .featured-i-b {
+section.event-list .event-list-content {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -355,32 +363,108 @@ section.section-i-b .featured-i-b {
 	gap: 1rem;
 }
 
-section.section-i-b .featured-i-b article {
+section.event-list .event-list-content article {
 	display: flex;
-	flex-direction: column;
+	flex-direction: column-reverse;
 	justify-content: center;
 	align-items: center;
 	gap: 1rem;
 }
 
-section.section-i-b .featured-i-b figure {
+section.event-list .event-list-content figure {
 	height: 17rem;
 	width: 30rem;
 }
 
-section.section-i-b .featured-i-b figure img {
+section.event-list .event-list-content figure img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-
-	/* fill contain cover none scale-down*/
 }
+
+/*##############################################################
+FORMS
+##############################################################*/
+input {
+	font-size: 1.4rem;
+	border: none;
+	background-color: var(--secnondary-color);
+}
+
+/*##############################################################
+SECTION FORM
+##############################################################*/
+
+section.form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 2rem;
+	gap: 2rem;
+}
+
+section.form form {
+	width: 30rem;
+	display: flex;
+
+	justify-content: space-between;
+	align-items: flex-end;
+
+	padding: 1.5rem;
+	background-color: var(--secondary-color);
+}
+
+section.form form > div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+}
+
+section.form form > div label {
+	font-size: 1.2rem;
+	color: var(--primary-color);
+	padding: 0.5rem;
+	width: 100%;
+}
+
+select#cities-id {
+	font-size: 1.7rem;
+	padding: 1rem;
+	border: none;
+	border-bottom: 1px solid var(--tertiary-color);
+	background-color: var(--secnondary-color);
+	width: 17rem;
+}
+
+section.form form input[type="submit"] {
+	padding: 1rem 1.5rem;
+	cursor: pointer;
+	color: var(--light-color);
+	background-color: var(--primary-color);
+}
+
+section.form form input[type="submit"]:hover {
+	background-color: var(--confirm-color);
+}
+
 /*##############################################################
 FOOTER
 ##############################################################*/
 footer.footer {
 	grid-area: footer;
 	background-color: black;
+
+	display: grid;
+	justify-content: center;
+	align-items: center;
+}
+
+footer address {
+	color: var(--light-color);
+	font-size: 1.5rem;
 }
 
 /*##############################################################
@@ -392,7 +476,7 @@ MEDIA QUERY
 	CONTENEDOR
 	##############################################################*/
 	.body-wrapper {
-		grid-template-rows: 24.1rem minmax(calc(100vh - 40.1rem), 1fr) 16rem;
+		grid-template-rows: 24.1rem minmax(calc(100vh - 30.1rem), 1fr) 6rem;
 	}
 
 	/*##############################################################
@@ -423,7 +507,6 @@ MEDIA QUERY
 	header .header-login a {
 		background-color: var(--primary-color);
 		color: var(--light-color);
-		/* padding: 0.5rem 2rem; */
 		font-size: 2rem;
 	}
 
@@ -467,19 +550,19 @@ MEDIA QUERY
 	SECTION I-B
 	##############################################################*/
 
-	section.section-i-b .featured-i-b {
+	section.event-list .event-list-content {
 		min-width: 75vw;
 	}
 
-	section.section-i-b h3 {
+	section.event-list h3 {
 		font-size: 2rem;
 		font-weight: 700;
 		color: var(--tertiary-color);
 	}
 
-	section.section-i-b .featured-i-b article {
+	section.event-list .event-list-content article {
 		display: flex;
-		flex-direction: row;
+		flex-direction: row-reverse;
 		justify-content: space-evenly;
 		align-items: center;
 		gap: 5rem;
@@ -488,7 +571,23 @@ MEDIA QUERY
 		width: 100%;
 	}
 
-	section.section-i-b .featured-i-b article div {
+	section.event-list .event-list-content article div {
 		width: 38.5rem;
+	}
+
+	/*##############################################################
+	SECTION FORM
+	##############################################################*/
+
+	section.form form {
+		min-width: 75vw;
+	}
+
+	select#cities-id {
+		min-width: 45rem;
+	}
+
+	section.form form input[type="submit"] {
+		font-size: 2rem;
 	}
 }
