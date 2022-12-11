@@ -17,6 +17,7 @@ article,
 aside,
 footer,
 figure,
+fieldset,
 h1,
 h2,
 h3,
@@ -52,13 +53,10 @@ VARIABLES
 	--light-color: white;
 	--confirm-color: #1f1fff;
 	--confirm-color-hover: #0000d1;
+	--invalid-color: #cf0606;
+	--valid-color: #058005;
 
 	--font-family-primary: "Roboto", sans-serif;
-
-	--valid-color: #005200;
-	--invalid-color: #8d1a11;
-	--danger-color: #750000;
-	--danger-color-hover: #a80000;
 
 	--bg-light-color: #f8f9f9;
 	--bg-valid-color: #e3fae3;
@@ -100,7 +98,7 @@ ul {
 strong {
 	font-weight: bold;
 }
-
+/*
 .h-40 {
 	height: 4rem;
 }
@@ -120,20 +118,13 @@ strong {
 .w-80 {
 	width: 8rem;
 }
-
-.link-btn {
-	background-color: var(--primary-color);
-	font-size: 1.4rem;
-}
-
-.link-btn:hover {
-	background-color: var(--confirm-color);
-}
+*/
 
 /*##############################################################
 ICONOS
 ##############################################################*/
 
+/*
 .icon {
 	display: block;
 }
@@ -184,6 +175,23 @@ ICONOS
 
 .icon-sunny-to-cloudy {
 	background: center/contain no-repeat url("../icons/icon-sunny-to-cloudy.svg");
+}
+*/
+
+/*##############################################################
+ESPECÍFICO DE ESTA HOJA DE ESTILOS
+##############################################################*/
+.link-btn {
+	background-color: var(--primary-color);
+	font-size: 1.8rem;
+}
+
+.link-btn:hover {
+	background-color: var(--confirm-color);
+}
+
+.fz25 {
+	font-size: 2.5rem;
 }
 
 /*##############################################################
@@ -268,18 +276,19 @@ header .header-nav {
 	align-items: center;
 	background-color: var(--light-color);
 	width: 100%;
+	padding: 1rem;
 }
 
 header .header-nav nav ul {
 	display: flex;
 	align-items: center;
 	/* justify-content: space-between; */
-	padding: 1rem;
+	/* padding: 1rem; */
 }
 
 header .header-nav nav ul a {
 	color: var(--primary-color);
-	padding: 1rem;
+	padding: 0 1rem;
 	font-size: 2rem;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -427,10 +436,6 @@ section.event-promotion {
 	padding: 2rem;
 }
 
-section.event-promotion h2 {
-	font-size: 2.5rem;
-}
-
 section.event-promotion p {
 	font-size: 1.6rem;
 	line-height: 2.5rem;
@@ -514,16 +519,6 @@ section.event-x h2 {
 /*##############################################################
 FORMS
 ##############################################################*/
-input {
-	font-size: 1.4rem;
-	border: none;
-	background-color: var(--secnondary-color);
-}
-
-/*##############################################################
-SECTION FORM
-##############################################################*/
-
 section.form {
 	display: flex;
 	flex-direction: column;
@@ -536,42 +531,141 @@ section.form {
 section.form form {
 	width: 30rem;
 	display: flex;
-
-	justify-content: space-between;
-	align-items: flex-end;
-
-	padding: 1.5rem;
-	background-color: var(--secondary-color);
-}
-
-section.form form > div {
-	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	gap: 2rem;
+	padding: 1rem 1rem 2rem;
+	border: 2px solid var(--secondary-color);
+	background-color: var(--light-color);
+}
+
+section.form form div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: stretch;
+	width: 100%;
+	padding: 1rem;
 	gap: 1rem;
 }
 
-section.form form > div label {
-	font-size: 1.2rem;
+section.form form fieldset {
+	width: 100%;
+}
+
+section.form form label {
+	font-size: 1.7rem;
 	color: var(--primary-color);
 	padding: 0.5rem;
 	width: 100%;
 }
 
-select#cities-id {
-	font-size: 1.7rem;
+section.form form input {
+	font-size: 1.8rem;
+	border: none;
+	border-bottom: 1px solid var(--tertiary-color);
+	background-color: var(--light-color);
+	padding: 1rem;
+	width: 100%;
+}
+
+section.form form input:focus {
+	background-color: var(--secondary-color);
+	outline: none;
+}
+
+section.form form textarea {
+	resize: none;
+	color: var(--dark-color);
+	font-size: 1.8rem;
+}
+
+section.form form textarea:focus {
+	outline: none;
+	background-color: var(--secondary-color);
+}
+
+section.form form select#cities-id {
+	font-size: 1.8rem;
 	padding: 1rem;
 	border: none;
 	border-bottom: 1px solid var(--tertiary-color);
 	background-color: var(--secnondary-color);
-	width: 17rem;
+	width: 100%;
 }
 
-section.form form input[type="submit"] {
+section.form form input ~ span,
+section.form form textarea ~ span {
+	color: var(--light-color);
+	padding: 0.5rem;
+	text-align: right;
+	font-size: 1.4rem;
+}
+
+.input-valid {
+	background-color: var(--valid-color);
+}
+
+.input-invalid {
+	background-color: var(--invalid-color);
+}
+
+section.form form .submit-block {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+section.form form input[type="submit"],
+section.form form .submit-block a {
+	padding: 1rem 1.5rem;
+	font-size: 1.8rem;
+	cursor: pointer;
+	color: var(--light-color);
+	background-color: var(--primary-color);
+	border: none;
+}
+
+section.form form input[type="submit"]:hover {
+	background-color: var(--confirm-color);
+}
+
+/*##############################################################
+SECTION FORM SEARCH
+##############################################################*/
+
+section.form form.search {
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-end;
+	padding: 1rem;
+	gap: 1rem;
+	background-color: var(--secondary-color);
+}
+
+section.form form.search div {
+	align-items: center;
+	padding: 0.5rem;
+}
+
+section.form form.search label {
+	font-size: 1.2rem;
+}
+
+section.form form.search input[type="submit"] {
 	padding: 1rem 1.5rem;
 	cursor: pointer;
 	color: var(--light-color);
+}
+
+section.form form.search select#cities-id {
+	width: 17rem;
+}
+
+/**********debug***********************************************************/
+span {
+	display: none;
 }
 
 /*##############################################################
@@ -607,7 +701,7 @@ MEDIA QUERY
 	CONTENEDOR
 	##############################################################*/
 	.body-wrapper {
-		grid-template-rows: 24.1rem minmax(calc(100vh - 30.1rem), 1fr) 6rem;
+		grid-template-rows: 26.1rem minmax(calc(100vh - 32.1rem), 1fr) 6rem;
 	}
 
 	/*##############################################################
@@ -654,7 +748,7 @@ MEDIA QUERY
 	}
 
 	header .header-nav nav ul a {
-		padding: 4rem;
+		padding: 0 4rem;
 	}
 
 	/*##############################################################
@@ -734,15 +828,6 @@ MEDIA QUERY
 	SECTION EVENT X
 	##############################################################*/
 
-	/* section.event-x {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		gap: 2rem;
-		padding: 2rem;
-	} */
-
 	section.event-x h2 {
 		font-size: 3rem;
 	}
@@ -779,5 +864,13 @@ MEDIA QUERY
 		padding: 0;
 		/* text-align: justify;
 		text-justify: inter-word; */
+	}
+
+	/*##############################################################
+	SECTION FORM LOGIN
+	##############################################################*/
+
+	section.form form#form-login {
+		max-width: 50rem;
 	}
 }

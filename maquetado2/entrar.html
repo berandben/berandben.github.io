@@ -56,31 +56,56 @@
 				</div>
 			</header>
 			<main>
-				<section class="event-promotion">
-					<h2 class="fz25">Promociona tu evento</h2>
-					<div class="max-width-desktop">
+				<section class="form">
+					<h2 class="fz25">Inciar Sesión</h2>
+					<form class="max-width-desktop"
+						  action="#"
+						  id="form-login">
 						<div>
-							<p>Si has llegado hasta aquí, seguramente
-								estarás organizando un evento que deseas difundir
-								al mayor número de personas.
-							</p>
-							<p>En Vive el Ocio te ofrecemos la oportunidad de promocionarlo de manera totalmente
-								gratuita y
-								en tan solo un par de clicks.
-							</p>
-							<p>Si lo deseas, también podrás destacar tu
-								evento por poco dinero.
-							</p>
-							<p>No esperes!!!, crea una cuenta de promotor ahora mismo.
-							</p>
+							<div>
+								<label for="username-id"
+									   title="Introduzca su nombre de usuario">
+									Usuario*
+								</label>
+								<input type="text"
+									   id="username-id"
+									   name="username"
+									   required
+									   placeholder="Su nombre de usuario"
+									   minlength="6"
+									   maxlength="50">
+								<span class="input-invalid">WTF</span>
+								<span class="input-valid">Ok</span>
+							</div>
+							<div>
+								<label for="password-id"
+									   title="Introduzca su contraseña">
+									Contraseña*
+								</label>
+								<input type="password"
+									   id="password-id"
+									   name="password"
+									   required
+									   placeholder="Su contraseña"
+									   minlength="6"
+									   maxlength="50">
+								<span class="input-invalid">WTF</span>
+								<span class="input-valid">Ok</span>
+							</div>
 						</div>
-						<a href="./registro.html"
-						   class="link-btn"
-						   title="Crear una cuenta de promotor">Crear
-							cuenta</a>
-					</div>
+						<div class="submit-block">
+							<a href="./registro.html">
+								Registrarse
+							</a>
 
+							<input type="submit"
+								   name="submit-login"
+								   value="Iniciar sesión"
+								   title="Botón para iniciar sesión">
+						</div>
+					</form>
 				</section>
+
 			</main>
 			<footer class="footer">
 				<address>© Juan Jose MB</address>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible"
+			  content="IE=edge">
+		<meta name="viewport"
+			  content="width=device-width, initial-scale=1.0">
+		<meta name="autor"
+			  content="Juan José MB">
+		<title>************** Título del sitio **************</title>
+		<link href="assets/css/main.css"
+			  rel="stylesheet"
+			  type="text/css">
+		<link rel="icon"
+			  type="image/png"
+			  href="/eltiempo/public/assets/favicon/favicon.png">
+	</head>
+
+	<body>
+		<div class="body-wrapper">
+			<header>
+				<div class="header-main max-width-desktop">
+					<div class="header-login">
+						<a href="./entrar.html"
+						   class="link-btn"
+						   title="Entrar a la zona privada">Entrar</a>
+					</div>
+					<div class="header-logo">
+						<a href="index.html">
+							<img class="logo"
+								 src="assets/img/logo/logo_vvocio.png"
+								 alt="Logo Vvocio">
+						</a>
+						<h1>Vive el Ocio</h1>
+					</div>
+				</div>
+				<div class="header-nav">
+					<nav class="max-width-desktop">
+						<ul>
+							<li>
+								<a href="./index.html"
+								   title="Ir a la página de inicio">Inicio</a>
+							</li>
+							<li>
+								<a href="./promociona.html"
+								   title="Promociona tu evento">Promociona</a>
+							</li>
+							<li>
+								<a href="./eventos.html"
+								   title="Listado de eventos">Eventos</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+			<main>
+				<section class="form">
+					<h2 class="fz25">Crear Cuenta</h2>
+					<form class="max-width-desktop"
+						  action="#"
+						  id="form-register">
+						<div>
+							<div>
+								<label for="email-id"
+									   title="Introduzca su email">
+									Email*
+								</label>
+								<input type="email"
+									   id="email-id"
+									   name="email"
+									   required
+									   placeholder="Su email"
+									   minlength="6"
+									   maxlength="50">
+								<span class="input-invalid">WTF</span>
+								<span class="input-valid">Ok</span>
+							</div>
+							<div>
+								<label for="first-name-id"
+									   title="Introduzca su nombre">
+									Nombre*
+								</label>
+								<input type="text"
+									   id="first-name-id"
+									   name="first-name"
+									   required
+									   placeholder="Su nombre"
+									   minlength="6"
+									   maxlength="50">
+								<span class="input-invalid">WTF</span>
+								<span class="input-valid">Ok</span>
+							</div>
+							<fieldset>
+								<div>
+									<label for="first-surname-id"
+										   title="Introduzca su primer apellido">
+										Primer apellido*
+									</label>
+									<input type="text"
+										   id="first-surname-id"
+										   name="first-surname"
+										   required
+										   placeholder="Primer apellido"
+										   minlength="6"
+										   maxlength="50">
+									<span class="input-invalid">WTF</span>
+									<span class="input-valid">Ok</span>
+								</div>
+								<div>
+									<label for="second-surname-id"
+										   title="Introduzca su segundo apellido">
+										Segundo apellido*
+									</label>
+									<input type="text"
+										   id="second-surname-id"
+										   name="second-surname"
+										   required
+										   placeholder="Segundo apellido"
+										   minlength="6"
+										   maxlength="50">
+									<span class="input-invalid">WTF</span>
+									<span class="input-valid">Ok</span>
+								</div>
+							</fieldset>
+							<fieldset>
+								<div>
+									<label for="phone-id"
+										   title="Introduzca su número de teléfono">
+										Teléfono*
+									</label>
+									<input type="text"
+										   id="phone-id"
+										   name="phone"
+										   required
+										   placeholder="Teléfono"
+										   minlength="9"
+										   maxlength="9">
+									<span class="input-invalid">WTF</span>
+									<span class="input-valid">Ok</span>
+								</div>
+								<div>
+									<label for="nif-id"
+										   title="Introduzca su NIF">
+										NIF*
+									</label>
+									<input type="text"
+										   id="nif-id"
+										   name="nif"
+										   required
+										   placeholder="NIF"
+										   minlength="9"
+										   maxlength="9">
+									<span class="input-invalid">WTF</span>
+									<span class="input-valid">Ok</span>
+								</div>
+							</fieldset>
+							<div>
+								<label for="street-id"
+									   title="Introduzca su domicilio">
+									Domicilio*</label>
+								<textarea id="street-id"
+										  name="street"
+										  rows="4"
+										  maxlength="255"
+										  required
+										  placeholder="Calle ...."></textarea>
+								<span class="input-invalid">WTF</span>
+								<span class="input-valid">Ok</span>
+							</div>
+							<div>
+								<label for="cities-id"
+									   title="Selector de localidades">Seleccione*</label>
+								<select name="cities"
+										id="cities-id"
+										title="Seleccione una localidad">
+									<option selected
+											disabled>
+										- Localidad -
+									</option>
+
+									<option value="algeciras">Algeciras</option>
+									<option value="los-barrios">Los Barrios</option>
+									<option value="castellar-de-la-frontera">Castellar de la Frontera</option>
+
+									<option value="estepona">Estepona</option>
+									<option value="marbella">Marbella</option>
+									<option value="fuengirola">Fuengirola</option>
+
+								</select>
+
+							</div>
+							<fieldset>
+								<div>
+									<label for="password-id"
+										   title="Introduzca su contraseña">
+										Contraseña*
+									</label>
+									<input type="password"
+										   id="password-id"
+										   name="password"
+										   required
+										   placeholder="Su contraseña"
+										   minlength="6"
+										   maxlength="50">
+									<span class="input-invalid">WTF</span>
+									<span class="input-valid">Ok</span>
+								</div>
+								<div>
+									<label for="repeat-password-id"
+										   title="Repita su contraseña">
+										Contraseña*
+									</label>
+									<input type="password"
+										   id="repeat-password-id"
+										   name="repeat-password"
+										   required
+										   placeholder="Repetir contraseña"
+										   minlength="6"
+										   maxlength="50">
+									<span class="input-invalid">WTF</span>
+									<span class="input-valid">Ok</span>
+								</div>
+							</fieldset>
+						</div>
+						<div class="submit-block">
+							<input type="submit"
+								   name="submit-register"
+								   value="Crear cuenta"
+								   title="Botón para registrar la cuenta">
+						</div>
+					</form>
+				</section>
+
+			</main>
+			<footer class="footer">
+				<address>© Juan Jose MB</address>
+			</footer>
+		</div>
+	</body>
+
+</html>
