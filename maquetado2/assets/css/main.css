@@ -121,6 +121,15 @@ strong {
 	width: 8rem;
 }
 
+.link-btn {
+	background-color: var(--primary-color);
+	font-size: 1.4rem;
+}
+
+.link-btn:hover {
+	background-color: var(--confirm-color);
+}
+
 /*##############################################################
 ICONOS
 ##############################################################*/
@@ -196,6 +205,8 @@ body {
 		"header "
 		"main"
 		"footer";
+
+	background-color: var(--secondary-color);
 }
 
 /*##############################################################
@@ -218,14 +229,8 @@ header .header-login {
 }
 
 header .header-login a {
-	background-color: var(--primary-color);
-	color: var(--light-color);
 	padding: 0.5rem 2rem;
-	font-size: 1.4rem;
-}
-
-header .header-login a:hover {
-	background-color: var(--confirm-color);
+	color: var(--light-color);
 }
 
 header .header-main {
@@ -235,7 +240,6 @@ header .header-main {
 	align-items: center;
 	width: 100%;
 	padding: 0.5rem;
-	background-color: var(--secondary-color);
 }
 
 header .header-logo {
@@ -262,6 +266,8 @@ header .header-nav {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	background-color: var(--light-color);
+	width: 100%;
 }
 
 header .header-nav nav ul {
@@ -287,6 +293,7 @@ MAIN
 ##############################################################*/
 main {
 	grid-area: main;
+	background-color: var(--light-color);
 }
 
 /*##############################################################
@@ -295,6 +302,7 @@ SECTION
 section {
 	border-top: 2px solid var(--secondary-color);
 }
+
 h2 {
 	font-size: 1.7rem;
 	color: var(--primary-color);
@@ -326,16 +334,35 @@ section.section-i-h .featured-i-h {
 }
 
 section.section-i-h .featured-i-h figure {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	height: 30rem;
 	width: 30rem;
+	overflow: hidden;
 }
 
-section.section-i-h .featured-i-h figure img {
+section.section-i-h .featured-i-h.one > *:nth-child(n + 2) {
+	display: none;
+}
+
+section.section-i-h .featured-i-h figure a {
+	width: 100%;
+	height: 100%;
+}
+
+section.section-i-h .featured-i-h figure a img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+	transition: transform 0.7s;
 
 	/* fill contain cover none scale-down*/
+}
+
+section.section-i-h .featured-i-h figure a img:hover {
+	transform: scale(1.2);
 }
 
 /*##############################################################
@@ -374,12 +401,114 @@ section.event-list .event-list-content article {
 section.event-list .event-list-content figure {
 	height: 17rem;
 	width: 30rem;
+	overflow: hidden;
 }
 
 section.event-list .event-list-content figure img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+	transition: transform 0.7s;
+}
+
+section.event-list .event-list-content figure img:hover {
+	transform: scale(1.2);
+}
+
+/*##############################################################
+SECTION EVENT PROMOTION
+##############################################################*/
+section.event-promotion {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+	padding: 2rem;
+}
+
+section.event-promotion h2 {
+	font-size: 2.5rem;
+}
+
+section.event-promotion p {
+	font-size: 1.6rem;
+	line-height: 2.5rem;
+	padding: 0.5rem 2rem;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+section.event-promotion > div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+	background-color: var(--secondary-color);
+	width: 100%;
+	padding: 4rem 2rem 2rem;
+}
+
+section.event-promotion a {
+	padding: 1.5rem 2rem;
+	align-self: flex-end;
+	color: var(--light-color);
+}
+
+/*##############################################################
+SECTION EVENT X
+##############################################################*/
+.one > *:nth-child(n + 2) {
+	display: none;
+}
+
+section.event-x {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+	padding: 2rem;
+}
+
+section.event-x article {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+	width: 100%;
+	padding: 2rem;
+}
+
+section.event-x article figure {
+	width: 100%;
+	height: 50rem;
+}
+
+section.event-x article figure img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+section.event-x article > div {
+	background-color: var(--secondary-color);
+	padding: 2rem 1rem;
+}
+
+section.event-x article p {
+	font-size: 1.6rem;
+	line-height: 2.5rem;
+	padding: 0.5rem 2rem;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+section.event-x h2 {
+	font-size: 2.5rem;
+	text-align: center;
 }
 
 /*##############################################################
@@ -443,11 +572,6 @@ section.form form input[type="submit"] {
 	padding: 1rem 1.5rem;
 	cursor: pointer;
 	color: var(--light-color);
-	background-color: var(--primary-color);
-}
-
-section.form form input[type="submit"]:hover {
-	background-color: var(--confirm-color);
 }
 
 /*##############################################################
@@ -457,7 +581,7 @@ footer.footer {
 	grid-area: footer;
 	background-color: black;
 
-	display: grid;
+	display: flex;
 	justify-content: center;
 	align-items: center;
 }
@@ -472,6 +596,13 @@ MEDIA QUERY
 ##############################################################*/
 
 @media only screen and (min-width: 768px) {
+	/*##############################################################
+	MAX WITDH DESKTOP
+	##############################################################*/
+	.max-width-desktop {
+		max-width: 102.4rem;
+	}
+
 	/*##############################################################
 	CONTENEDOR
 	##############################################################*/
@@ -488,7 +619,7 @@ MEDIA QUERY
 		justify-content: flex-start;
 		padding: 0 2rem;
 		gap: 4rem;
-		width: 75vw;
+		width: 100%;
 	}
 
 	h1 {
@@ -500,8 +631,8 @@ MEDIA QUERY
 	}
 
 	header .header-login {
-		width: 75vw;
-		padding: 0 2rem;
+		padding: 2rem 0 0;
+		width: 100%;
 	}
 
 	header .header-login a {
@@ -515,8 +646,7 @@ MEDIA QUERY
 	}
 
 	nav {
-		width: 75vw;
-		padding: 0 2rem;
+		width: 100%;
 	}
 
 	header .header-nav nav ul {
@@ -533,17 +663,19 @@ MEDIA QUERY
 
 	section.section-i-h .featured-i-h {
 		flex-direction: row;
-		gap: 3rem;
 		justify-content: space-between;
+		gap: 2rem;
+
+		width: 100%;
 	}
 
 	section.section-i-h .featured-i-h figure {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
 		max-width: 30vw;
 		max-height: 30vw;
+	}
+
+	section.section-i-h .featured-i-h.one > *:nth-child(n + 2) {
+		display: flex;
 	}
 
 	/*##############################################################
@@ -551,7 +683,7 @@ MEDIA QUERY
 	##############################################################*/
 
 	section.event-list .event-list-content {
-		min-width: 75vw;
+		width: 100%;
 	}
 
 	section.event-list h3 {
@@ -580,7 +712,7 @@ MEDIA QUERY
 	##############################################################*/
 
 	section.form form {
-		min-width: 75vw;
+		width: 100%;
 	}
 
 	select#cities-id {
@@ -589,5 +721,63 @@ MEDIA QUERY
 
 	section.form form input[type="submit"] {
 		font-size: 2rem;
+	}
+	/*##############################################################
+	SECTION EVENT PROMOTION
+	##############################################################*/
+
+	section.event-promotion a {
+		font-size: 2rem;
+	}
+
+	/*##############################################################
+	SECTION EVENT X
+	##############################################################*/
+
+	/* section.event-x {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 2rem;
+		padding: 2rem;
+	} */
+
+	section.event-x h2 {
+		font-size: 3rem;
+	}
+
+	section.event-x article {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: stretch;
+		gap: 1rem;
+		/* height: 54.4rem; */
+		padding: 0;
+	}
+
+	section.event-x article figure {
+		width: 60%;
+	}
+
+	section.event-x article > div {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: stretch;
+		padding: 0rem 3rem;
+		max-height: 50rem;
+		width: 40%;
+
+		/* max-height: 50rem; */
+		/* border: 1px solid red; */
+	}
+
+	section.event-x article p {
+		font-size: 1.8rem;
+		line-height: 2.5rem;
+		padding: 0;
+		/* text-align: justify;
+		text-justify: inter-word; */
 	}
 }

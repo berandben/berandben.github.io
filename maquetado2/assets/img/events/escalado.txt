@@ -1,0 +1,5 @@
+formato: jpeg
+calidad: 80%
+altura: 620px
+anchura: 500px
+Resolución:96px/in
